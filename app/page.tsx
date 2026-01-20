@@ -142,7 +142,7 @@ export default function Portfolio() {
             desc="Enterprise retail management app used by field force teams for store audits, reporting, and task management. 100K+ downloads."
             links={[
               {
-                label: "Android",
+                label: "Cheil Perfect Store for India (Android)",
                 url: "https://play.google.com/store/apps/details?id=com.cheilperfectstore.india",
               },
             ]}
@@ -153,7 +153,7 @@ export default function Portfolio() {
             desc="Enterprise-grade seafarer utility app with offline sync, secure maritime HR integrations, and crew management features."
             links={[
               {
-                label: "Android",
+                label: "CrewCompanion (Android)",
                 url: "https://play.google.com/store/apps/details?id=com.marlowcrewcompanionapp",
               },
             ]}
