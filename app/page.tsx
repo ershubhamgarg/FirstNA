@@ -100,20 +100,63 @@ export default function Portfolio() {
         {/* ===== Projects ===== */}
         <Section title="Key Projects">
           <Project
-            name="LogiRYD"
-            desc="Employee transportation platform with Driver & Employee apps, live tracking, OTP auth."
+            name="LogiRYD – Employee Transportation Platform"
+            desc="Enterprise-grade employee transportation platform with two React Native apps (Driver & Employee) featuring live driver tracking, OTP-based authentication, and seamless employee onboard/offboard management."
+            links={[
+              {
+                label: "Driver App (Android)",
+                url: "https://play.google.com/store/apps/details?id=com.mll.logiryd.driver&hl=en_IN",
+              },
+              {
+                label: "Employee App (Android)",
+                url: "https://play.google.com/store/apps/details?id=com.mll.logiryd.employee&hl=en_IN",
+              },
+              {
+                label: "Driver App (iOS)",
+                url: "https://apps.apple.com/in/app/logiryd-driver-app/id6754685036",
+              },
+              {
+                label: "Employee App (iOS)",
+                url: "https://apps.apple.com/in/app/logiryd-employee-app/id6754684970",
+              },
+            ]}
           />
+
           <Project
-            name="Slurrp"
-            desc="Recipe aggregator app with 100K+ downloads on Android & iOS."
+            name="Slurrp – Recipe Aggregator App"
+            desc="Recipe discovery app aligned to user dietary preferences and taste profiles with 100K+ downloads."
+            links={[
+              {
+                label: "Android",
+                url: "https://play.google.com/store/search?q=slurrp&c=apps",
+              },
+              {
+                label: "iOS",
+                url: "https://apps.apple.com/in/app/slurrp/id1557645217",
+              },
+            ]}
           />
+
           <Project
             name="Cheil Perfect Store (CPS)"
-            desc="Enterprise retail management app for field force operations."
+            desc="Enterprise retail management app used by field force teams for store audits, reporting, and task management. 100K+ downloads."
+            links={[
+              {
+                label: "Android",
+                url: "https://play.google.com/store/apps/details?id=com.cheilperfectstore.india",
+              },
+            ]}
           />
+
           <Project
-            name="CrewCompanion"
-            desc="Seafarer utility app with offline sync and secure maritime integrations."
+            name="CrewCompanion – Marlow Navigation"
+            desc="Enterprise-grade seafarer utility app with offline sync, secure maritime HR integrations, and crew management features."
+            links={[
+              {
+                label: "Android",
+                url: "https://play.google.com/store/apps/details?id=com.marlowcrewcompanionapp",
+              },
+            ]}
           />
         </Section>
 
@@ -162,10 +205,23 @@ const Experience = ({ role, company, period, points }: any) => (
     </ul>
   </div>
 );
-
-const Project = ({ name, desc }: any) => (
-  <div>
+const Project = ({ name, desc, links }: any) => (
+  <div className="border border-zinc-200 dark:border-zinc-700 rounded-xl p-4 space-y-2">
     <p className="font-semibold">{name}</p>
     <p className="text-sm text-zinc-600 dark:text-zinc-400">{desc}</p>
+
+    <div className="flex flex-wrap gap-3 pt-2">
+      {links.map((link: any, i: any) => (
+        <a
+          key={i}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          {link.label} →
+        </a>
+      ))}
+    </div>
   </div>
 );
