@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-zinc-100 to-zinc-300 dark:from-zinc-900 dark:to-zinc-800 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center p-6">
       <main className="w-full max-w-2xl bg-white/90 dark:bg-zinc-900/80 rounded-xl p-8 shadow-lg flex flex-col items-center">
         <Image
-          className="dark:invert mb-6"
-          src="/file.svg"
+          className="mb-6p bg-amber-300 rounded-full"
+          src="/profile.jpeg"
           alt="Profile Picture"
-          width={120}
-          height={120}
+          width={220}
+          height={220}
         />
         <h1 className="text-3xl font-bold mb-2">Shubham Garg</h1>
         <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
