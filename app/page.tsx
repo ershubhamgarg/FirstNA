@@ -18,13 +18,13 @@ export default function Portfolio() {
         </p>
         <div className="flex gap-4 mb-8">
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:ershubhamgarg@yahoo.in"
             className="rounded bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition"
           >
             Contact
           </a>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/ershubhamgarg"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded bg-zinc-800 text-white px-4 py-2 hover:bg-zinc-900 transition"
@@ -32,7 +32,7 @@ export default function Portfolio() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/ershubhamgarg"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded bg-blue-800 text-white px-4 py-2 hover:bg-blue-900 transition"
@@ -44,8 +44,9 @@ export default function Portfolio() {
           <h2 className="text-xl font-semibold mb-4">About Me</h2>
           <p className="mb-6 text-zinc-700 dark:text-zinc-300">
             I am a passionate frontend developer with experience building modern
-            web applications using React, Next.js, and Tailwind CSS. I love
-            creating beautiful, performant, and accessible user interfaces.
+            mobile and web applications using React Native, React, Next.js, and
+            Tailwind CSS. I love creating beautiful, performant, and accessible
+            user interfaces.
           </p>
           <h2 className="text-xl font-semibold mb-4">Projects</h2>
           <ul className="space-y-4">
