@@ -3,68 +3,169 @@ import Image from "next/image";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6">
-      <main className="w-full max-w-2xl bg-white/90 dark:bg-zinc-900/80 rounded-xl p-8 shadow-lg flex flex-col items-center">
-        <Image
-          className="mb-6p bg-amber-300 rounded-full"
-          src="/profile.jpeg"
-          alt="Profile Picture"
-          width={220}
-          height={220}
-        />
-        <h1 className="text-3xl font-bold mb-2">Shubham Garg</h1>
-        <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
-          Frontend Developer | React Native | React | Next.js | Tailwind CSS
-        </p>
-        <div className="flex gap-4 mb-8">
-          <a
-            href="mailto:ershubhamgarg@yahoo.in"
-            className="rounded bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition"
-          >
-            Contact
-          </a>
-          <a
-            href="https://github.com/ershubhamgarg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded bg-zinc-800 text-white px-4 py-2 hover:bg-zinc-900 transition"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/ershubhamgarg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded bg-blue-800 text-white px-4 py-2 hover:bg-blue-900 transition"
-          >
-            LinkedIn
-          </a>
-        </div>
-        <section className="w-full">
-          <h2 className="text-xl font-semibold mb-4">About Me</h2>
-          <p className="mb-6 text-zinc-700 dark:text-zinc-300">
-            I am a passionate frontend developer with experience building modern
-            mobile and web applications using React Native, React, Next.js, and
-            Tailwind CSS. I love creating beautiful, performant, and accessible
-            user interfaces.
+    <div className="min-h-screen bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-950 dark:to-zinc-900 flex justify-center p-6">
+      <main className="w-full max-w-4xl bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-8 md:p-12">
+        {/* ===== Header ===== */}
+        <div className="flex flex-col items-center text-center border-b border-zinc-200 dark:border-zinc-700 pb-8">
+          <Image
+            src="/profile.jpeg"
+            alt="Shubham Garg"
+            width={200}
+            height={200}
+            className="rounded-full mb-6 border-4 border-zinc-300 dark:border-zinc-700"
+          />
+
+          <h1 className="text-3xl md:text-4xl font-bold">Shubham Garg</h1>
+
+          <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-300">
+            Senior Front-End / React Native Engineer
           </p>
-          <h2 className="text-xl font-semibold mb-4">Projects</h2>
-          <ul className="space-y-4">
-            <li className="border rounded-lg p-4 bg-zinc-50 dark:bg-zinc-800">
-              <h3 className="font-bold">Project One</h3>
-              <p className="text-sm">
-                A brief description of your project goes here.
-              </p>
-            </li>
-            <li className="border rounded-lg p-4 bg-zinc-50 dark:bg-zinc-800">
-              <h3 className="font-bold">Project Two</h3>
-              <p className="text-sm">
-                A brief description of your project goes here.
-              </p>
-            </li>
-          </ul>
-        </section>
+
+          <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400 max-w-xl">
+            8+ years of experience building scalable React Native & React.js
+            applications powering 100K+ users across enterprise and consumer
+            products.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            <a href="mailto:shubhamgarg0203@gmail.com" className="btn-primary">
+              Contact
+            </a>
+            <a
+              href="https://github.com/ershubhamgarg"
+              target="_blank"
+              className="btn-dark"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/ershubhamgarg"
+              target="_blank"
+              className="btn-blue"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        {/* ===== About ===== */}
+        <Section title="About Me">
+          Front-End Engineer with 8+ years of experience specializing in React
+          Native, React.js, and TypeScript. Strong background in delivering
+          enterprise-grade mobile applications, leading cross-functional teams,
+          and shipping high-performance apps with secure cloud integrations
+          using Firebase and GCP.
+        </Section>
+
+        {/* ===== Skills ===== */}
+        <Section title="Technical Skills">
+          <SkillGroup title="Frontend">
+            React Native, React.js, Next.js, TypeScript, JavaScript
+          </SkillGroup>
+          <SkillGroup title="State & Data">
+            Redux, Redux Toolkit, Redux-Saga, MobX, REST APIs
+          </SkillGroup>
+          <SkillGroup title="Cloud & Tools">
+            Firebase, GCP, CI/CD (Bitrise), MoEngage, Twilio
+          </SkillGroup>
+          <SkillGroup title="Testing & Analytics">
+            Jest, Google Analytics, AppsFlyer, Smartlook
+          </SkillGroup>
+        </Section>
+
+        {/* ===== Experience ===== */}
+        <Section title="Experience">
+          <Experience
+            role="Team Lead"
+            company="NeoSOFT Technologies"
+            period="July 2020 – Present | Noida"
+            points={[
+              "Led development of scalable React Native applications using Redux and Firebase.",
+              "Managed cross-functional teams of 20+ engineers across RN, Android, iOS, and Ionic.",
+              "Resolved technical escalations and improved delivery quality for enterprise clients.",
+            ]}
+          />
+
+          <Experience
+            role="Associate Software Engineer"
+            company="SmartData Enterprises"
+            period="Aug 2017 – Mar 2020 | Dehradun"
+            points={[
+              "Built cross-platform applications across healthcare, social media, and e-commerce domains.",
+              "Delivered pixel-perfect UI with strong focus on performance and user experience.",
+            ]}
+          />
+        </Section>
+
+        {/* ===== Projects ===== */}
+        <Section title="Key Projects">
+          <Project
+            name="LogiRYD"
+            desc="Employee transportation platform with Driver & Employee apps, live tracking, OTP auth."
+          />
+          <Project
+            name="Slurrp"
+            desc="Recipe aggregator app with 100K+ downloads on Android & iOS."
+          />
+          <Project
+            name="Cheil Perfect Store (CPS)"
+            desc="Enterprise retail management app for field force operations."
+          />
+          <Project
+            name="CrewCompanion"
+            desc="Seafarer utility app with offline sync and secure maritime integrations."
+          />
+        </Section>
+
+        {/* ===== Education ===== */}
+        <Section title="Education">
+          <p className="font-semibold">
+            B.Tech – Computer Science & Engineering
+          </p>
+          <p className="text-sm text-zinc-500">
+            Maharishi Markandeshwar University (MMDU), 2017
+          </p>
+        </Section>
       </main>
     </div>
   );
 }
+
+/* ===== Reusable Components ===== */
+
+const Section = ({ title, children }) => (
+  <section className="mt-10">
+    <h2 className="text-xl font-bold mb-4">{title}</h2>
+    <div className="text-zinc-700 dark:text-zinc-300 leading-relaxed space-y-3">
+      {children}
+    </div>
+  </section>
+);
+
+const SkillGroup = ({ title, children }) => (
+  <div>
+    <p className="font-semibold">{title}</p>
+    <p className="text-sm text-zinc-600 dark:text-zinc-400">{children}</p>
+  </div>
+);
+
+const Experience = ({ role, company, period, points }) => (
+  <div className="mb-6">
+    <p className="font-semibold">
+      {role} – {company}
+    </p>
+    <p className="text-sm text-zinc-500 mb-2">{period}</p>
+    <ul className="list-disc ml-6 space-y-1 text-sm">
+      {points.map((p, i) => (
+        <li key={i}>{p}</li>
+      ))}
+    </ul>
+  </div>
+);
+
+const Project = ({ name, desc }) => (
+  <div>
+    <p className="font-semibold">{name}</p>
+    <p className="text-sm text-zinc-600 dark:text-zinc-400">{desc}</p>
+  </div>
+);
