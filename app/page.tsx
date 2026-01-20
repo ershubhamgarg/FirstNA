@@ -133,7 +133,7 @@ export default function Portfolio() {
 
 /* ===== Reusable Components ===== */
 
-const Section = ({ title, children }) => (
+const Section = ({ title, children }: any) => (
   <section className="mt-10">
     <h2 className="text-xl font-bold mb-4">{title}</h2>
     <div className="text-zinc-700 dark:text-zinc-300 leading-relaxed space-y-3">
@@ -142,28 +142,28 @@ const Section = ({ title, children }) => (
   </section>
 );
 
-const SkillGroup = ({ title, children }) => (
+const SkillGroup = ({ title, children }: any) => (
   <div>
     <p className="font-semibold">{title}</p>
     <p className="text-sm text-zinc-600 dark:text-zinc-400">{children}</p>
   </div>
 );
 
-const Experience = ({ role, company, period, points }) => (
+const Experience = ({ role, company, period, points }: any) => (
   <div className="mb-6">
     <p className="font-semibold">
       {role} – {company}
     </p>
     <p className="text-sm text-zinc-500 mb-2">{period}</p>
     <ul className="list-disc ml-6 space-y-1 text-sm">
-      {points.map((p, i) => (
+      {points.map((p: any, i: any) => (
         <li key={i}>{p}</li>
       ))}
     </ul>
   </div>
 );
 
-const Project = ({ name, desc }) => (
+const Project = ({ name, desc }: any) => (
   <div>
     <p className="font-semibold">{name}</p>
     <p className="text-sm text-zinc-600 dark:text-zinc-400">{desc}</p>
